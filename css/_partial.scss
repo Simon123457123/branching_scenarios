@@ -1,0 +1,62 @@
+/*Variables*/
+$primary-color: #b71e1e;
+$secondary-color: #060606;
+$btn-color: #b71e1e;
+$btn-hover: #9a1a1a;
+$contrast-color: #f5f7fa;
+$light-text: #FFFFFF;
+$heading-font: 'Inter', 'sans-serif';
+$paragraph-font: 'Inter', 'sans-serif';
+
+/*Mixins*/
+
+/*Link styling*/
+@mixin link-base ( $text-color: $light-text) {
+    color: $text-color;
+    text-decoration: none;
+    font-family: $heading-font;
+    font-weight: bold;
+}
+
+/*Information box*/
+@mixin information-box ($border-radius: 1em, $padding-bottom: 1em, $border-inline: 0px solid none, $border-bottom: 0px solid none) {
+background-color: $light-text;
+border-radius: $border-radius;
+border-inline: $border-inline;
+border-bottom: $border-bottom;
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+text-align: center;
+padding: 1em;
+h2 {
+    padding-bottom: $padding-bottom;
+}
+
+
+}
+
+/*Blue button*/
+
+@mixin red-btn ($padding: .5em, $width: 7em, $font-weight: bold, $margin: 2em auto) {
+    .red-btn {
+        padding: $padding;
+        background-color: $btn-color;
+        width: $width;
+        margin: $margin;
+        border-radius: .4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $light-text;
+        text-decoration: none;
+        font-weight: $font-weight;
+        font-size: .9em;
+    }
+    .red-btn:hover {
+        background-color: $btn-hover;
+    }
+}
+
+
+
+
+

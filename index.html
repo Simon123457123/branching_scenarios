@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forside</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="javascript/js.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="#">SafeNet</a></div>
+
+    <ul class="desktop-menu">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="#" class="nav-link">About</a></li>
+      <li><a href="#" class="nav-link">Services</a></li>
+      <li><a href="#" class="nav-link">Products</a></li>
+      <li><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <ul class="nav-menu">
+    <li><a href="#" class="nav-link">Home</a></li>
+    <li><a href="#" class="nav-link">About</a></li>
+    <li><a href="#" class="nav-link">Services</a></li>
+    <li><a href="#" class="nav-link">Products</a></li>
+    <li><a href="#" class="nav-link">Contact</a></li>
+  </ul>
+
+
+<main>
+
+<section>
+  <h1>Protect Your Devices</h1>
+  <p>Learn how to recognize malware threats, secure your digital presence, and help those around you stay safe online.</p>
+</section>
+
+<section>
+  <div class="box">
+    <h2>Real-time Threat Detection </h2>
+    <p>Get instant alerts and around-the-clock visibility into suspicious activity across your devices.</p>
+    <a href="" class="red-btn">Learn more</a>
+  </div>
+
+    <div class="box">
+      <h2>End-to-End Encryption</h2>
+      <p>Prevent malware from intercepting sensitive data with our encryption.</p>
+      <a href="" class="red-btn">Learn more</a>
+    </div>
+
+  <div class="box">
+    <h2>Malware-Safe Compliance</h2>
+    <p>We help you meet legal data requirements while protecting your systems from malware.</p>
+    <a href="" class="red-btn">Learn more</a>
+    
+  </div>
+  </section>
+   
+<section>
+  <div class="branch-quiz">
+    <!-- Scene 1 -->
+    <div id="sp0">
+      <p class="red-text"> Welcome to the Quiz</p>
+      <p>Are you ready to start?</p>
+      <button id="scene-0">Start Quiz</button>
+    </div>
+
+    <!-- Scene 2 -->
+    <div id="sp1" class="hidden">
+      <p>You recieve an email saying you've won a new car. In order to claim it you have to click the link.</p>
+        <button id="scene-1">Click the link - You've just won a car!</button>
+        <button id="scene-2">Ignore it - You can't trust this mail.</button>
+        <button id="scene-3">Hover over the link to inspect it.</button>
+    </div>
+
+    <!-- Scene 3-->
+    <div id="sp2-1" class="hidden">
+      <p>Oh no! A screen pops up demanding that you pay instantly!</p>
+      <button id="scene-4">You decide to pay the ransom, by typing in your personal information.</button>
+      <button id="scene-5">You panic and shut down your computer down immediately.</button>
+      <button id="scene-6">Try to search online for a decryption tool.</button>
+    </div>
+
+    <div id="sp2-2" class="hidden">
+      <p>Nicely done! You've avoided a phishing attack, but your friend wasn't so lucky. What do you tell them?</p>
+      <button id="scene-7">Change all his passwords and run an antivirus program.</button>
+      <button id="scene-8">Tell them to unplug their pc and call for support.</button>
+      <button id="scene-9">Tell them not to think about it. Nothing that serious can happen.</button>
+    </div>
+
+    <div id="sp2-3" class="hidden">
+      <p>You hover your mouse over the link and you think it looks suspicious.</p>
+      <button id="scene-10">Report the mail.</button>
+      <button id="scene-11">Reply to ask if the car is real.</button>
+      <button id="scene-12">Just ignore it.</button>
+    </div>
+  
+  <!--Scene 4 -->
+  <div id="sp2-1-1" class="hidden">
+    <p>You paid the money, but you never got the car, and you lost your money.</p>
+    <p class="feedback">Paying cybercriminals doesn't guarantee recovery. Always back up your data!</p>
+    <button id="restart">Try again?</button> 
+  </div>
+  
+  <div id="sp2-1-2" class="hidden">
+    <p>You might have stopped the encryption process. Good Reaction!</p>
+    <p class="feedback">Quick action can safe your system. Keep calm, and know what to do.</p>
+    <button id="restart">Try again?</button>
+  </div>
+
+  <div id="sp2-1-3" class="hidden">
+    <p>You found a working decryptor and saved your money.</p>
+    <p class="feedback">Well done. Being prepared and doing your research cant outsmart most ransomware.</p>
+    <button id="restart">Try again?</button>
+  </div>
+  
+  <div id="sp2-2-1" class="hidden">
+    <p>Smart move. You've contained most of the damage.</p>
+    <p class="feedback">Taking quick action is key.</p>
+    <button id="restart">Try again?</button>
+  </div>
+  
+  <div id="sp2-2-2" class="hidden">
+    <p>A good choice. Better safe than sorry.</p>
+    <p class="feedback">Calling IT can help prevent panic and keep everything secure. Don't be afraid to ask for help.</p>
+    <button id="restart">Try again?</button>
+  </div>
+
+  <div id="sp2-2-3" class="hidden">
+    <p>Ignoring your problems, was a bad choice. The infection has spread.</p>
+    <p class="feedback">Underreacting is the wrong choice. Always take action.</p>
+    <button id="restart">Try again?</button>
+  </div>
+  
+  <div id="sp2-3-1" class="hidden">
+    <p>Perfect response. You've also helped other people.</p>
+    <p class="feedback">You not only avoided the attack, you also helped others.</p>
+    <button id="restart">Try again?</button>
+  </div>
+  
+  <div id="sp2-3-2" class="hidden">
+    <p>Bad move - now they know you are online. Expect more spam coming your way.</p>
+    <p class="feedback">Never engage with suspicious mails.</p>
+    <button id="restart">Try again?</button>
+  </div>
+
+  <div id="sp2-3-3" class="hidden">
+    <p>The safe choice but you missed a chance to help others.</p>
+    <p class="feedback">Staying silent is a safe option, but it's important to speak up.</p>
+    <button id="restart">Try again?</button>
+  </div>
+  </div>
+</section>
+
+  <section>
+    <div class="images">
+
+      <div class="old">
+        <img src="img/old-woman.png" alt="">
+        <div class="box2">
+          <h2>Helping seniors stay safe online</h2>
+          <p>We provide easy-to-follow guidance and tools to help older adults.</p>
+          <a href="" class="red-btn">Learn more</a>
+          </div>
+        </div>
+        
+      <div class="young">
+        <img src="img/young-man.png" alt=""> 
+        <div class="box2">
+          <h2>Teaching the next generation</h2>
+          <p>We help the youth to recognize online threats and develop good habits.</p>
+          <a href="" class="red-btn">Learn more</a>
+          </div>
+        </div> 
+    </div>
+  </section>
+
+</main>
+  <footer>
+
+      <div class="footer-main">
+          <div class="footer-about">
+              <h3>About Us</h3>
+              <a href="index.html">Read more about us here</a>
+          </div>
+          
+          <div class="footer-services">
+              <h3>Services</h3>
+              <a href="index.html">Read more about our services here</a>
+          </div>
+         
+          <div class="footer-contact">
+              <h3>Contact Us</h3>
+              <a href="mailto:support@safenet.com">Support@Safenet.com</a>
+              <a href="tel:11111111">+45 12 34 56 78</a>
+          </div>
+      
+          <div class="footer-follow">
+              <h3>Follow Us</h3>
+              <p>Stay up-to-date with the latest news</p>
+              <a href="https://www.linkedin.com/">LinkedIn</a>
+              <a href="https://www.x.com/"> | Twitter |</a>
+              <a href="https://www.facebook.com/">Facebook</a>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

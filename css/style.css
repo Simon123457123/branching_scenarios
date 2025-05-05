@@ -1,0 +1,326 @@
+/*Variables*/
+/*Mixins*/
+/*Link styling*/
+/*Information box*/
+/*Blue button*/
+/*General styling for the document*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hides quiz elements */
+.hidden {
+  display: none;
+}
+
+/*Font type*/
+body, button {
+  font-family: "Inter", "sans-serif";
+}
+
+/*Standard image size*/
+img {
+  width: 100%;
+}
+
+/*Standard Header styling*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "sans-serif";
+}
+
+/*Standard link styling*/
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*Standard paragraph styling*/
+p {
+  font-family: "Inter", "sans-serif";
+  color: #060606;
+}
+
+/*Dekstop navigation styling*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b71e1e;
+  padding: 1.5em;
+}
+
+/*Right dekstop navigation*/
+.desktop-menu {
+  gap: 20px;
+  list-style-type: none;
+  padding-right: 1em;
+}
+.desktop-menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Inter", "sans-serif";
+  font-weight: bold;
+}
+
+/*Left SafeNet */
+.logo {
+  padding-left: 1em;
+  font-size: 1.2em;
+}
+.logo a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Inter", "sans-serif";
+  font-weight: bold;
+}
+
+/*Phone navigation menu styling*/
+.nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background-color: #b71e1e;
+  list-style: none;
+  text-align: center;
+}
+.nav-menu li {
+  padding: 1em;
+}
+
+/*Hamburger logo styling for the phone*/
+.hamburger {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+/*Makes sure hamburger menu can be toggled via JavaScript*/
+.nav-menu.active {
+  max-height: 500px;
+}
+
+/*Main body of the website*/
+main {
+  min-height: 100vh;
+}
+
+/*Top text*/
+section:nth-child(1) {
+  padding: 5em;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+section:nth-child(1) p {
+  padding-top: 0.7em;
+}
+
+/* Inormation boxes*/
+section:nth-child(2) {
+  padding: 5em;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+section:nth-child(2) .box {
+  background-color: #FFFFFF;
+  border-radius: 1em;
+  border-inline: 0px solid none;
+  border-bottom: 0px solid none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 1em;
+}
+section:nth-child(2) .box h2 {
+  padding-bottom: 1em;
+}
+section:nth-child(2) .box .red-btn {
+  padding: 0.5em;
+  background-color: #b71e1e;
+  width: 7em;
+  margin: 2em auto;
+  border-radius: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+section:nth-child(2) .box .red-btn:hover {
+  background-color: #9a1a1a;
+}
+
+section:nth-child(3) {
+  background-color: rgb(255, 255, 255);
+}
+section:nth-child(3) .branch-quiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1em;
+  background-image: url("../img/quiz3.png");
+  background-size: cover;
+  background-position: center;
+  color: #060606;
+  text-align: center;
+}
+section:nth-child(3) .branch-quiz button {
+  background-color: #b71e1e;
+  border: none;
+  padding: 1em;
+  margin: 1em;
+  width: 20em;
+  height: 4em;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.4em;
+}
+section:nth-child(3) .branch-quiz [id^=scene-]:hover,
+section:nth-child(3) .branch-quiz #restart:hover {
+  background-color: #9a1a1a;
+}
+section:nth-child(3) .branch-quiz p {
+  font-size: 2em;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+section:nth-child(3) .branch-quiz .feedback {
+  padding: 1em 0;
+  font-size: 1.1em;
+}
+section:nth-child(3) .branch-quiz .red-text {
+  color: #b71e1e;
+}
+
+/*Image boxes*/
+section:nth-child(4) {
+  text-align: center;
+  background-color: #f5f7fa;
+}
+section:nth-child(4) .box2 {
+  background-color: #FFFFFF;
+  border-radius: 0 0 1em 1em;
+  border-inline: 2px solid rgba(0, 0, 0, 0.1254901961);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1254901961);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 1em;
+}
+section:nth-child(4) .box2 h2 {
+  padding-bottom: 0.5em;
+}
+section:nth-child(4) .box2 .red-btn {
+  padding: 0.5em;
+  background-color: #b71e1e;
+  width: 7em;
+  margin: 2em auto;
+  border-radius: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+section:nth-child(4) .box2 .red-btn:hover {
+  background-color: #9a1a1a;
+}
+section:nth-child(4) .images {
+  margin: auto;
+  padding: 1em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+section:nth-child(4) img {
+  display: block;
+  border-radius: 1em 1em 0 0;
+}
+
+/*Genral footer styling*/
+.footer-main {
+  background-color: #b71e1e;
+  text-align: center;
+  padding: 1em;
+  display: flex;
+}
+.footer-main h3 {
+  color: white;
+  padding: 0.7em 0 0.3em;
+}
+.footer-main p {
+  color: white;
+}
+.footer-main a {
+  text-decoration: underline;
+}
+.footer-main a:hover {
+  color: rgb(234, 232, 232);
+}
+.footer-main .footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+/*Media query for phone*/
+@media screen and (max-width: 1244px) {
+  .desktop-menu {
+    display: none;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+  }
+  .footer-main .footer-about, .footer-main .footer-services, .footer-main .footer-contact, .footer-main .footer-follow {
+    width: 50%;
+  }
+  .box {
+    width: 70vw;
+  }
+  section:nth-child(2) {
+    align-items: center;
+  }
+  button {
+    font-size: 1em;
+  }
+}
+/*Media query for computer*/
+@media screen and (min-width: 1245px) {
+  .nav-menu, .hamburger {
+    display: none;
+  }
+  .desktop-menu {
+    display: flex;
+  }
+  section:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  section:nth-child(3) #choices-container {
+    flex-direction: row;
+  }
+  section:nth-child(4) .images {
+    flex-direction: row;
+  }
+  .box p {
+    max-width: 40ch;
+  }
+  .branch-quiz {
+    font-size: 1.5em;
+  }
+  .footer-main {
+    justify-content: space-around;
+  }
+  .footer-main h3 {
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

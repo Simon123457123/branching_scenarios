@@ -1,0 +1,300 @@
+@use 'partial';
+
+  /*General styling for the document*/
+* {
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hides quiz elements */
+  .hidden  {
+    display: none;
+  }
+
+  /*Font type*/
+  body, button {
+    font-family: partial.$paragraph-font;
+  }
+
+  /*Standard image size*/
+  img {
+    width: 100%;
+  }
+
+  /*Standard Header styling*/
+  h1, h2, h3, h4, h5, h6 {
+    font-family: partial.$heading-font;
+  }
+
+  /*Standard link styling*/
+  a {
+    color: partial.$light-text;
+    text-decoration: none;
+  }
+  
+  /*Standard paragraph styling*/
+  p {
+    font-family: partial.$paragraph-font;
+    color: partial.$secondary-color;
+  }
+
+ /*Dekstop navigation styling*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: partial.$primary-color;
+    padding: 1.5em;  
+  }
+
+  /*Right dekstop navigation*/
+  .desktop-menu {
+    gap: 20px;
+    list-style-type: none;
+    padding-right: 1em;
+    a {
+        @include partial.link-base();
+    }
+}
+
+  /*Left SafeNet */
+  .logo {
+    padding-left: 1em;
+    font-size: 1.2em;
+    a {
+        @include partial.link-base();
+    }
+}
+  
+  /*Phone navigation menu styling*/
+  .nav-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    background-color: partial.$btn-color;
+    list-style: none;
+    text-align: center;
+    li {
+       padding: 1em;    
+      }
+  }
+
+  /*Hamburger logo styling for the phone*/
+  .hamburger {
+      user-select: none;
+      color: rgb(255, 255, 255);
+      font-size: 1.5em;
+    }
+
+  /*Makes sure hamburger menu can be toggled via JavaScript*/
+  .nav-menu.active {
+      max-height: 500px;
+    }
+
+  /*Main body of the website*/
+  main {
+    min-height: 100vh;
+    }
+
+  /*Top text*/
+  section:nth-child(1) {
+    padding: 5em;
+    background-color: partial.$light-text;
+    text-align: center;
+    p {
+        padding-top: .7em;
+      }
+    }
+
+  /* Inormation boxes*/
+  section:nth-child(2) {
+    padding: 5em;
+    background-color: partial.$contrast-color;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  .box {
+    @include partial.information-box();
+    @include partial.red-btn();
+  }
+}
+
+// Quiz styling
+  section:nth-child(3) {
+    background-color: rgb(255, 255, 255);
+
+  .branch-quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1em;
+    background-image: url('../img/quiz3.png');
+    background-size: cover;
+    background-position: center;
+    color: partial.$secondary-color;
+    text-align: center;
+
+  button {
+    background-color: partial.$btn-color;
+    border: none;
+    padding: 1em;
+    margin: 1em;
+    width: 20em;
+    height: 4em;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border-radius: .4em;
+  }
+    
+  [id^="scene-"]:hover,
+    #restart:hover{
+    background-color: partial.$btn-hover;
+  }
+
+  p {
+    font-size: 2em;
+    color: partial.$light-text;
+    font-weight: bold;
+  }
+
+  .feedback {
+    padding: 1em 0;
+    font-size: 1.1em;
+  }
+
+  .red-text {
+    color: partial.$primary-color;
+    }
+  }
+}
+  
+  /*Image boxes*/
+  section:nth-child(4) {
+    text-align: center; 
+    background-color: partial.$contrast-color;
+
+  .box2 {
+    @include partial.information-box($border-radius: 0 0 1em 1em, $padding-bottom: .5em, $border-inline: 2px solid #00000020, $border-bottom: 2px solid #00000020);
+    @include partial.red-btn();
+  }
+
+  .images {
+    margin: auto;
+    padding: 1em;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    display: block;
+    border-radius: 1em 1em 0 0;
+  }
+}
+
+  /*Genral footer styling*/
+  .footer-main {
+    background-color: partial.$primary-color;
+    text-align: center;
+    padding: 1em;        
+    display: flex;
+
+    h3 {
+      color: white;
+      padding: .7em 0 .3em;
+    }
+
+    p {
+      color: white;
+    }
+    
+    a {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: rgb(234, 232, 232);
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: .3em;
+    }
+  }
+
+    /*Media query for phone*/
+    @media screen and (max-width: 1244px) {
+    .desktop-menu {
+      display: none;
+    }
+
+    .footer-main {
+      flex-wrap: wrap;
+
+    .footer-about, .footer-services, .footer-contact, .footer-follow {
+      width: 50%;
+    }
+  }
+
+    .box {
+      width: 70vw;
+    }
+
+    section:nth-child(2) {
+      align-items: center;
+    }
+
+    button {
+      font-size: 1em;
+      }
+    }
+
+    /*Media query for computer*/
+    @media screen and (min-width: 1245px) {
+    .nav-menu, .hamburger {
+      display: none;
+    }
+
+    .desktop-menu {
+      display: flex;
+    }
+    
+    section:nth-child(2) {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+    section:nth-child(3) {
+      #choices-container {
+        flex-direction: row;
+      }
+    }
+      
+    section:nth-child(4) {
+      .images {
+        flex-direction: row;
+      }
+    }
+  
+    .box p {
+        max-width: 40ch;
+    }
+
+    .branch-quiz {
+        font-size: 1.5em;
+      }
+
+    .footer-main {
+      justify-content: space-around; 
+
+      h3 {
+        padding: 0;
+      }
+    }
+}
+
+
