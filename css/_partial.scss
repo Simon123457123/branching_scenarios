@@ -30,12 +30,9 @@ padding: 1em;
 h2 {
     padding-bottom: $padding-bottom;
 }
-
-
 }
 
-/*Blue button*/
-
+/*Red button*/
 @mixin red-btn ($padding: .5em, $width: 7em, $font-weight: bold, $margin: 2em auto) {
     .red-btn {
         padding: $padding;
